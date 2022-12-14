@@ -1,0 +1,25 @@
+﻿@model CreateProductCommand
+@{
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Urün Ekleme</h1>
+<form method="post" asp-action="AddProduct">
+    
+    <label>Urun Adı</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <label>Urun Marka</label>
+    <input type="text" asp-for="Brand" class="form-control" />
+    <br />
+    <label>Fiyat</label>
+    <input type="text" asp-for="Stock" class="form-control" />
+    <br />
+    <label>Vergi</label>
+    <input type="text" asp-for="Tax" class="form-control" />
+    <br />
+
+
+</form>
+

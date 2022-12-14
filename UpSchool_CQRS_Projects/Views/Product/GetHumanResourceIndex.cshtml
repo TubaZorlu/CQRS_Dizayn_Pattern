@@ -1,0 +1,23 @@
+﻿@model GetProductHumanResourceByIdQueryResult
+@{
+    ViewData["Title"] = "GetHumanResourceIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Insan Kaynakları Ürün Detay Paneli</h1>
+
+<div class="container">
+    <label>Urun Id</label>
+    <input type="text" asp-for="ProductID" class="form-control" />
+    <br />
+    <label>Urun Adı</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <label>Urun Marka</label>
+    <input type="text" asp-for="Brand" class="form-control" />
+    <br />
+    <label>fiyat</label>
+    <input type="text" asp-for="SalePrice" class="form-control" />
+    <br />
+
+</div>
