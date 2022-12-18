@@ -1,0 +1,31 @@
+﻿@model List<GetAlluniversityQueryResult>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<div class=" container">
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Üniversite</th>
+            <th>Şehir</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+	{
+		 <tr>
+             <td>@item.Id</td>
+             <td>@item.Name</td>
+             <td>@item.City</td>
+             <td><a href="/University/DeleteUniversity/@item.Id" class="btn btn-danger">Sil</a></td>
+             <td><a href="/University/UpdateUniversity/@item.Id" class="btn btn-warning">Güncelle</a></td>
+         </tr>
+	}
+    </table>
+    <a href="/University/AddUniversity" class="btn btn-info">Kaydet</a>
+</div>

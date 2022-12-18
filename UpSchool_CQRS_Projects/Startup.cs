@@ -1,3 +1,4 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,9 @@ namespace UpSchool_CQRS_Projects
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ProductContext>();
+
+            services.AddMediatR(typeof(Startup));
+
 
             services.AddScoped<GetProductAccounterQueryHandler>();
             services.AddScoped<GetProductstoragerQueryHandler>();

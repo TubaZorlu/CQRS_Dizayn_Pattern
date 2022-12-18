@@ -1,0 +1,23 @@
+﻿@model UpSchool_CQRS_Projects.CQRS.Commands.UniversityCommands.CreateUniversityCommand
+@{
+    ViewData["Title"] = "UpdateUniversity";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>UpdateUniversity</h1>
+
+<br />
+<div class="container">
+    <form method="post">
+        <label>Universite Adı</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+        <label>Universite Şehri</label>
+        <input type="text" asp-for="City" class="form-control" />
+        <br />
+        <label>Universite Populasyon </label>
+        <input type="text" asp-for="Population" class="form-control" />
+        <br />
+        <button class="btn btn-danger">Güncelle</button>
+    </form>
+</div>
